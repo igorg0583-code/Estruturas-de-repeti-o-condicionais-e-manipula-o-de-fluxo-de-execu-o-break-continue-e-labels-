@@ -1,0 +1,3 @@
+Esta atividade tem como objetivo desenvolver e aprimorar os conhecimentos sobre a linguagem de programação Kotlin, utilizando estruturas de repetição, condicionais e comandos de controle de fluxo.
+Foram desenvolvidos 8 exercícios práticos envolvendo os comandos for, while, if, else, break e continue, abordando situações como verificação de números primos, cálculo de múltiplos, simulação de caixa eletrônico, manipulação de palavras, menus interativos e validação de senhas.
+O objetivo principal é compreender a lógica de programação, praticar a construção de algoritmos e aprender a controlar o fluxo de execução dos programas por meio de diferentes estruturas e condições.

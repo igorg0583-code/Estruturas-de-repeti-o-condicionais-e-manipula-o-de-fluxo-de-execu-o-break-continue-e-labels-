@@ -1,0 +1,165 @@
+fun main() {
+
+    // QUESTÃO 1 - O FILTRO DE VOGAIS
+
+    println("QUESTÃO 1")
+
+    val palavra = "Universidade"
+
+    for (letra in palavra) {
+        if (letra.lowercaseChar() in "aeiou") {
+            continue
+        }
+
+        println(letra)
+    }
+
+
+    // QUESTÃO 2 - O PRIMEIRO MÚLTIPLO COMUM
+
+    println("\nQUESTÃO 2")
+
+    var numero = 1
+
+    while (true) {
+        if (numero % 7 == 0 && numero % 13 == 0) {
+            println("Primeiro múltiplo comum: $numero")
+            break
+        }
+
+        numero++
+    }
+
+
+    // QUESTÃO 3 - SOMADOR COM LIMITE DE CARGA
+
+    println("\nQUESTÃO 3")
+
+    var total = 0
+
+    for (numero in 1..100) {
+        if (numero % 10 == 0) {
+            continue
+        }
+
+        total += numero
+
+        if (total > 500) {
+            break
+        }
+    }
+
+    println("Total final: $total")
+
+
+    // QUESTÃO 4 - SIMULADOR DE CAIXA ELETRÔNICO
+
+    println("\nQUESTÃO 4")
+
+    var saldo = 1000.0
+    val saque = 150.0
+
+    while (true) {
+        if (saldo >= saque) {
+            saldo -= saque
+
+            println("Saque realizado: R$ $saque")
+            println("Saldo atual: R$ $saldo")
+        } else {
+            println("Saldo Insuficiente")
+            break
+        }
+    }
+
+
+    // QUESTÃO 5 - DETECÇÃO DE NÚMEROS PRIMOS
+
+    println("\nQUESTÃO 5")
+
+    val alvo = 29
+    var ehPrimo = true
+
+    for (numero in 2 until alvo) {
+        if (alvo % numero == 0) {
+            ehPrimo = false
+            break
+        }
+    }
+
+    if (ehPrimo) {
+        println("$alvo é um número primo")
+    } else {
+        println("$alvo não é um número primo")
+    }
+
+
+    // QUESTÃO 6 - O MENU TEIMOSO
+
+    println("\nQUESTÃO 6")
+
+    while (true) {
+        println("\n===== MENU =====")
+        println("1 - Opção 1")
+        println("2 - Opção 2")
+        println("3 - Módulo em manutenção")
+        println("0 - Sair")
+
+        print("Escolha uma opção: ")
+
+        val opcao = readLine()?.toIntOrNull() ?: break
+
+        when (opcao) {
+            1, 2 -> println("Processando...")
+
+            3 -> {
+                println("Módulo em manutenção")
+                continue
+            }
+
+            0 -> {
+                println("Programa encerrado")
+                break
+            }
+
+            else -> println("Opção inválida")
+        }
+    }
+
+
+    // QUESTÃO 7 - PULA-OBSTÁCULOS NUMÉRICO
+
+    println("\nQUESTÃO 7")
+
+    for (numero in 1..50) {
+        if (numero % 10 == 7) {
+            continue
+        }
+
+        println(numero)
+    }
+
+
+    // QUESTÃO 8 - COFRE COM BLOQUEIO PROGRESSIVO
+
+    println("\nQUESTÃO 8")
+
+    val senhaCorreta = "1234"
+
+    for (tentativa in 1..5) {
+        print("Digite a senha: ")
+
+        val senha = readLine() ?: break
+
+        if (senha == senhaCorreta) {
+            println("Acesso concedido!")
+            break
+        } else {
+            println("Senha incorreta!")
+
+            if (tentativa == 3) {
+                println("Cofre travado administrativamente")
+                break
+            }
+        }
+    }
+}
